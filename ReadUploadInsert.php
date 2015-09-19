@@ -31,7 +31,7 @@ $arrayData=array_shift($rowData);for($i=0;$i<=count($arrayData);$i++) {
 $data_dump=array('HHRR'=>$hhrr,'EnvType'=>$env,'servername'=>$server, 'dbname'=>$db, 'stream'=>$stream,'job'=>$job,'count'=>$count,
  'EVTS'=>$evts,'EVTSRemark'=>$evtsremark,'FollowUpReqdYN'=>$followup,'ActionstakenYN'=>$action,'identityMetric'=>$token);
  $q1=$this->db->insert('RawAbendDataPushPoint',$data_dump);
- break;}} $flag="ok";if($flag=="ok"){redirect(base_url()."?msg=".base64_encode("FILE UPLOADED!! Abend Report File ". $actual_file_name. " has been successfully processed into server. You may now proceed to generate the associated EVTS of this report"),'refresh');
+ break;}} $flag="ok";if($flag=="ok"){redirect(base_url()."?msg=".base64_encode("FILE UPLOADED!! Abend Report File ". $actual_file_name. " has been successfully processed into server."),'refresh');
 }else {redirect(base_url()."?err=".base64_encode("RUNTIME ERROR!! There occured an unexpected error. Please try again cleaning the browser cache"),'refresh');
 }} // good data
 else {@unlink($filepath);
